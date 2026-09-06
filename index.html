@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Секретное досье</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- ФОНОВЫЙ КАНВАС ДЛЯ ЦИФР -->
+    <canvas id="matrix"></canvas>
+
+    <!-- ЭКРАН ДОСТУПА -->
+    <div class="access-screen" id="accessScreen">
+
+        <div class="access-box">
+
+            <div class="classified">TOP SECRET</div>
+
+            <div class="lock">🔒</div>
+
+            <h1>СЕКРЕТНОЕ ДОСЬЕ</h1>
+
+            <p class="warning">
+                Доступ к информации ограничен
+            </p>
+
+            <div class="file-info">
+                <p>ДЕЛО № <span>NK-001</span></p>
+                <p>УРОВЕНЬ ДОСТУПА: <span>MAXIMUM</span></p>
+                <p>СТАТУС: <span>СЕКРЕТНО</span></p>
+            </div>
+
+            <button onclick="openDossier()">
+                ОТКРЫТЬ ДОСЬЕ
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ОСНОВНОЙ САЙТ -->
+    <main class="dossier" id="dossier">
+
+        <!-- ШАПКА -->
+        <header>
+
+            <div class="top-secret">
+                TOP SECRET
+            </div>
+
+            <h1>ДОСЬЕ № NK-001</h1>
+
+            <p>ОБЪЕКТ: НИКУША</p>
+
+            <div class="status">
+                ● ДЕЛО АКТИВНО
+            </div>
+
+        </header>
+
+
+        <!-- ОСНОВНАЯ ИНФОРМАЦИЯ -->
+        <section class="profile">
+
+            <div class="photo-container">
+
+                <img src="images/photo1.jpeg" alt="Никуша">
+
+                <div class="photo-number">
+                    PHOTO #001
+                </div>
+
+            </div>
+
+
+            <div class="information">
+
+                <h2>ЛИЧНОЕ ДЕЛО</h2>
+
+                <div class="line"></div>
+
+                <p>
+                    <b>Имя:</b> Никуша
+                </p>
+
+                <p>
+                    <b>Статус:</b>
+                    Любимая девушка ❤️
+                </p>
+
+                <p>
+                    <b>Уровень опасности:</b>
+                    <span class="danger">██████████ 100%</span>
+                </p>
+
+                <p>
+                    <b>Особая способность:</b>
+                    Крадёт моё сердце
+                </p>
+
+                <p>
+                    <b>Главная улика:</b>
+                    Её улыбка
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- СЕКЦИЯ ФАКТОВ -->
+        <section class="facts">
+
+            <h2>ОБНАРУЖЕННЫЕ ФАКТЫ</h2>
+
+            <div class="facts-grid">
+
+                <div class="fact">
+                    <span>01</span>
+                    <h3>УЛЫБКА</h3>
+                    <p>
+                        Способна полностью изменить моё настроение.
+                    </p>
+                </div>
+
+                <div class="fact">
+                    <span>02</span>
+                    <h3>ГЛАЗА</h3>
+                    <p>
+                        Подозрительно красивые. Следствие продолжается.
+                    </p>
+                </div>
+
+                <div class="fact">
+                    <span>03</span>
+                    <h3>ХАРАКТЕР</h3>
+                    <p>
+                        Официально признан причиной моей влюблённости.
+                    </p>
+                </div>
+
+                <div class="fact">
+                    <span>04</span>
+                    <h3>ГОЛОС</h3>
+                    <p>
+                        Имеет способность заставить меня улыбаться.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ДОКАЗАТЕЛЬСТВА -->
+        <section class="evidence">
+
+            <h2>ДОКАЗАТЕЛЬСТВА</h2>
+
+            <p class="subtitle">
+                Материалы дела
+            </p>
+
+            <div class="gallery">
+
+                <div class="evidence-photo">
+                    <img src="images/photo2.jpeg" alt="Фото">
+                    <span>EVIDENCE #01</span>
+                </div>
+
+                <div class="evidence-photo">
+                    <img src="images/photo3.jpeg" alt="Фото">
+                    <span>EVIDENCE #02</span>
+                </div>
+
+                <div class="evidence-photo">
+                    <img src="images/photo4.jpeg" alt="Фото">
+                    <span>EVIDENCE #03</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- РОЗЫСК -->
+        <section class="wanted">
+
+            <div class="wanted-header">
+                <span>⚠️ РОЗЫСК</span>
+                <span>CASE #NK-001</span>
+            </div>
+
+            <h2>РАЗЫСКИВАЕТСЯ</h2>
+
+            <h3>САМАЯ ЛЮБИМАЯ ДЕВУШКА</h3>
+
+            <p>
+                Причина розыска:
+                украла моё сердце и отказывается возвращать.
+            </p>
+
+            <div class="wanted-status">
+                ❌ НЕ НАЙДЕНА
+            </div>
+
+            <p class="small-text">
+                Последний раз замечена в моих мыслях.
+            </p>
+
+        </section>
+
+
+        <!-- СЕКРЕТ -->
+        <section class="secret">
+
+            <h2>СЕКРЕТНЫЙ ФАЙЛ</h2>
+
+            <p>
+                Обнаружена дополнительная информация.
+            </p>
+
+            <button onclick="showSecret()">
+                🔐 ОТКРЫТЬ СЕКРЕТ
+            </button>
+
+            <div class="secret-message" id="secretMessage">
+
+                <h3>СЕКРЕТ РАСКРЫТ ❤️</h3>
+
+                <p>
+                    Среди всех людей на планете
+                    я всё равно выбрал бы тебя.
+                </p>
+
+                <p>
+                    Дело закрытию не подлежит.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ФИНАЛ -->
+        <footer>
+
+            <div class="stamp">
+                CASE<br>
+                NEVER<br>
+                CLOSED
+            </div>
+
+            <h2>
+                ДОСЬЕ ЗАКРЫТО
+            </h2>
+
+            <p>
+                Но история продолжается...
+            </p>
+
+            <p class="love">
+                ❤️ Я люблю тебя, Никуша ❤️
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
